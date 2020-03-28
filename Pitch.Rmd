@@ -1,0 +1,53 @@
+---
+title: "Course Project: US Automotive Fuel Consumption Analyser"
+author: "Lee bamber"
+date: "26/03/2020"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Introduction 
+
+The Automotive Fuel Consumption Analyser is a Shiny application that will allow the user to interactively analyse the fuel consumption (i.e miles per gallon=mpg) of US automobiles. 
+
+The analysis will include data visualisation, model generation and analysis and prediction. 
+
+The data used for this application is mtcars, which is part of ggplot2 package. 
+
+Use PageUp and PageDown keys to traverse this presentation
+
+## Application Overview- Selection Criteria
+
+There are two selection criteria available in the sidebar.
+
+- **Select box** - The user will be able to select **variable** (e.g number of cylinders,weight) to analyse.
+
+- **Slider** - The user will be able to select a **value** for the variable (e.g 4 cyliners) in order to predict the fuel consumption of an automotive model with that variable value
+
+## Application Overview- Tabular Output
+
+- **First tab (Visualisation)** -  Once a variable is selected, then the first tab will present a visualisation of the relationship between the selected variable (on the x axis ) and mpg (on the y axis). 
+
+- **Second tab (Model Summary)** - A model summary of the linear relationship between the selected variable and mpg will be displayed. This will display the precise mathematical model ( intercept and gradient ) and the metrics that define how well the model fits the data. 
+
+- **Third tab (Prediction)** - Having selected a variable and therefore a model, the user can then select a value of the variable to prdict the fuel consumption (mpg). For example, if Cylenders=cyl is selected as a variable, the user can then see what the fuel consumption of a 6 cylinder car would be. 
+
+## The mtcars Dataset
+
+The analysis will be based upon the mtcars data set, which includes data on 32 US automobile models. The dataset is included in the ggplot2 package.
+
+```{r}
+library(ggplot2)
+head(mtcars)
+```
+
+https://leebamber.shinyapps.io/wk4final/
+
+Click the link below for compiled project files on gitub repo.
+
+https://github.com/lmbamber/DevelopingDataProductsWK4
+
+
